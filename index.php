@@ -103,27 +103,29 @@
     		</tbody>
 	 	<?php endforeach; ?>
 	</table>
-		<?php foreach ($hotels as $key => $hotel) : ?>
-			<div class="card col-4 p-4" style="">
-				<img src="https://picsum.photos/200" class="card-img-top" alt="...">
-				<div class="card-body">
-				
-					<h5 class="card-title"> <?= $hotel['name'] ?> </h5>
-					<p class="card-text"> <?= $hotel['description'] ?> </p>
-					<p class="card-text">Voto: <?= $hotel['vote'] ?> </p>
-					<p class="card-text">Distanza dal Centro: <?= $hotel['distance_to_center'] ?> km</p>
 
-					<?php if ($hotel['parking'] === true) : ?>
+	<h2>DESCRIPTION HOTELS</h2>
+	<?php foreach ($hotels as $key => $hotel) : ?>
+		<div class="card col-4 p-4" style="">
+			<img src="https://picsum.photos/200" class="card-img-top" alt="...">
+			<div class="card-body">
+				
+				<h5 class="card-title"> <?= $hotel['name'] ?> </h5>
+				<p class="card-text"> <?= $hotel['description'] ?> </p>
+				<p class="card-text">Voto: <?= $hotel['vote'] ?> </p>
+				<p class="card-text">Distanza dal Centro: <?= $hotel['distance_to_center'] ?> km</p>
+
+				<?php if ($hotel['parking'] === true) : ?>
 						<p><i class="fa-solid fa-check"></i> Yes c'è il parcheggio</p>
-					<?php else : ?>
+				<?php else : ?>
 						<p><i class="fa-solid fa-x"></i> Mi spiace, non c'è il parcheggio </p>
 				<?php endif; ?>
     		
-					<a href="#" class="btn btn-primary">Prenota</a>
-				</div>
+				<a href="#" class="btn btn-primary">Prenota</a>
 			</div>
-			<?php endforeach; ?>
 		</div>
+		<?php endforeach; ?>
+	</div>
 	</div>
 </div>
 
