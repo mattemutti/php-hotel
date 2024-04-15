@@ -104,7 +104,7 @@
 	 	<?php endforeach; ?>
 	</table>
 
-	<h2>DESCRIPTION HOTELS</h2>
+	<h2 class="text-center">DESCRIPTION HOTELS</h2>
 	<?php foreach ($hotels as $key => $hotel) : ?>
 		<div class="card col-4 p-4" style="">
 			<img src="https://picsum.photos/200" class="card-img-top" alt="...">
