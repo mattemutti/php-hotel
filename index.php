@@ -1,5 +1,6 @@
 <?php
 
+
  $hotels = [
 
         [
@@ -40,12 +41,11 @@
 
     ];
 
-foreach ($hotels as $hotelArray) {
-	foreach ($hotelArray as $key => $hotel) {
-		echo ("$key $hotel <br>");
-	}	
-};
-	
+// foreach ($hotels as $hotelArray) {
+// 	foreach ($hotelArray as $key => $hotel) {
+// 		echo ("$key $hotel <br>");
+// 	}	
+// };	
 
 
 ?>
@@ -55,17 +55,45 @@ foreach ($hotels as $hotelArray) {
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<title>PhP_Hotel</title>
 </head>
+<style>
+
+/* *{
+	border: 1px dashed black;
+} */
+
+</style>
 <body>
 
+<div class="container text-center p-4">
+	<h1>Hotels</h1>
+</div>
 
-<div>
-	<?php ?>
+
+<div class="container">
+	<div class="row justify-content-center">
+		<?php foreach ($hotels as $hotelArray) : ?>
+			<div class="card col-4 p-4 gap-2" style="">
+				<img src="https://picsum.photos/200" class="card-img-top" alt="...">
+				<div class="card-body">
+				
+					<?php foreach ($hotelArray as $key => $hotel) : ?>	
+    					<h5 class="card-title"> <?= "$key: $hotel" ?> </h5>
+    					<p class="card-text"></p>
+					<?php endforeach; ?>
+    		
+					<a href="#" class="btn btn-primary">Prenota</a>
+				</div>
+			</div>
+			<?php endforeach; ?>
+		</div>
+	</div>
 </div>
 
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
