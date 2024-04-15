@@ -1,7 +1,5 @@
 <?php
 
-<?php
-
  $hotels = [
 
         [
@@ -42,7 +40,12 @@
 
     ];
 
-?>
+foreach ($hotels as $hotelArray) {
+	foreach ($hotelArray as $key => $hotel) {
+		echo ("$key $hotel <br>");
+	}	
+};
+	
 
 
 ?>
@@ -52,9 +55,17 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Hotel</title>
+	<title>PhP_Hotel</title>
 </head>
 <body>
-	
+
+
+<div>
+	<?php ?>
+</div>
+
+
+
+
 </body>
 </html>
