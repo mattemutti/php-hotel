@@ -75,6 +75,34 @@
 
 <div class="container">
 	<div class="row justify-content-center">
+
+	<table class="table">
+  		<thead>
+    		<tr>
+      			<th scope="col">#</th>
+      			<th scope="col">Name</th>
+      			<th scope="col">Description</th>
+      			<th scope="col">Km to Center</th>
+      			<th scope="col">Park</th>
+    		</tr>
+  		</thead>
+		  
+		<?php foreach ($hotels as $key => $hotel) : ?>
+  			<tbody>	
+    			<tr>
+      				<th scope="row"></th>
+      				<td><?= $hotel['name'] ?></td>
+      				<td><?= $hotel['description'] ?></td>
+      				<td><?= $hotel['distance_to_center'] ?> km</td>
+      				<td><?php if ($hotel['parking'] === true) : ?>
+						<p><i class="fa-solid fa-check"></i></p>
+					<?php else : ?>
+						<p><i class="fa-solid fa-x"></i></p>
+				<?php endif; ?></td>
+    			</tr>		
+    		</tbody>
+	 	<?php endforeach; ?>
+	</table>
 		<?php foreach ($hotels as $key => $hotel) : ?>
 			<div class="card col-4 p-4" style="">
 				<img src="https://picsum.photos/200" class="card-img-top" alt="...">
